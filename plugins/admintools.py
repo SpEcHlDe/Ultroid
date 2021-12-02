@@ -411,7 +411,7 @@ async def get_all_pinned(event):
         event.chat_id, filter=InputMessagesFilterPinned
     ):
         if i.message:
-            t = " ".join(i.message.split()[0:4])
+            t = " ".join(i.message.split()[:4])
             txt = "{}....".format(t)
         else:
             txt = "Go to message."
